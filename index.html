@@ -3,17 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue js app</title>
-    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <script src="./unpkg-vue.js"></script>
 </head>
 <body>
-
+<h1>vue js component excersice</h1>
     <div id="app">
-        Counter: {{ counter }}
         <div>
-            <button v-on:click = "count++">you click me{{count}} times.</button>
+            <plan v-for ="plan in plans" :name="plan"></plan>
         </div>
+        <increase-count></increase-count>
+        <increase-count></increase-count>
+        <increase-count></increase-count>
     </div>   
 
+    <!-- Component-1 counter component -->
+    <script type="text/x-template" id="click-counter-template">
+    <div>
+        <p>Click</p>
+        <button v-on:click ="count++" >Click Here{{count}}</button>
+    </div>
+    </script>
+
+<!-- Component-2 plan component using props -->
+    <script type="text/x-template" id="plan-template">
+        <div>
+            <div>
+                <span>
+                    {{name}}
+                </span>
+            </div>
+        </div>
+    </script>
     <script src="./main.js"></script>
 </body>
 

@@ -1,21 +1,23 @@
-// import App from './App'
+// Component-1 counter component
 
-const app = Vue.createApp({
-  data(){
-    return {
-      counter: 0,
-      count:0
-    }
-  },
-  mounted(){
-    setInterval(()=>{
-      this.counter++;
-    }, 500)
-  },
-  
-  // template:'<button v-on:click = "count++">you click me{{count}} times.</button>'  
+Vue.component('increase-count', {
+template: '#click-counter-template',
+data(){
+  return{
+    count: 0,
+  }
+}
+}),
 
-});
-app.mount("#app");
+// Component-2 plan component using props
+Vue.component('plan',{
+  template:'#plan-template',
+  props:['name']
+})
 
-
+new Vue({
+  el: '#app',
+  data:{
+    plans:['The Hacker', 'title1', 'title2', 'title3']
+  }
+})
