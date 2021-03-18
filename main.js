@@ -1,19 +1,21 @@
 // import App from './App'
 
 const app = Vue.createApp({
-  template:`
-  <h1>Vue js</h1>
-  <h1>Hello with CDN<h1>
-  `
+  data(){
+    return {
+      counter: 0,
+      count:0
+    }
+  },
+  mounted(){
+    setInterval(()=>{
+      this.counter++;
+    }, 500)
+  },
+  
+  // template:'<button v-on:click = "count++">you click me{{count}} times.</button>'  
+
 });
 app.mount("#app");
 
-const Counter =Vue.createApp({
-  data() {
-    return {
-      counter: 0
-    }
-  }
-});
 
-Counter.mount('#counter');

@@ -8,11 +8,11 @@
 <body>
 
     <div id="app">
-        <!-- {{message}} -->
-    </div>   
-    <div id="counter">
         Counter: {{ counter }}
-      </div>
+        <div>
+            <button v-on:click = "count++">you click me{{count}} times.</button>
+        </div>
+    </div>   
 
     <script src="./main.js"></script>
 </body>
