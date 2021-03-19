@@ -15,9 +15,24 @@ Vue.component('plan',{
   props:['name']
 })
 
-new Vue({
-  el: '#app',
-  data:{
+Vue.component('plan-picker',{
+  template:'#plan-picker-template',
+  data(){
+   return{
     plans:['The Hacker', 'title1', 'title2', 'title3']
+   }
+  }
+})
+
+
+new Vue({
+  el: '#app'
+})
+
+// new app
+var NewApp = new Vue({
+  el: '#NewApp',
+  data:{
+    message: 'Test NewApp',
   }
 })

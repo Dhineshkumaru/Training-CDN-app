@@ -6,13 +6,18 @@
     <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <!-- <script src="https://unpkg.com/vue"></script> -->
     <script src="./unpkg-vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+
 </head>
 <body>
 <h1>vue js component excersice</h1>
+
+    <div id="NewApp" v-bind:title= "message">
+        <!-- {{message}} -->Binding property is working.
+    </div>
     <div id="app">
-        <div>
-            <plan v-for ="plan in plans" :name="plan"></plan>
-        </div>
+        <plan-picker></plan-picker>
+        <plan-picker></plan-picker>
         <increase-count></increase-count>
         <increase-count></increase-count>
         <increase-count></increase-count>
@@ -34,6 +39,12 @@
                     {{name}}
                 </span>
             </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="plan-picker-template">
+        <div>
+            <plan v-for ="plan in plans" :name="plan"></plan>
         </div>
     </script>
     <script src="./main.js"></script>
