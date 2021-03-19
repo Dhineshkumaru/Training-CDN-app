@@ -33,6 +33,6 @@ new Vue({
 var NewApp = new Vue({
   el: '#NewApp',
   data:{
-    message: 'Test NewApp',
+    message: 'Test NewApp'  + new Date().toLocaleString(),
   }
 })
