@@ -33,7 +33,10 @@ new Vue({
 var NewApp = new Vue({
   el: '#NewApp',
   data:{
+    activeColor: 'red',
+    fontSize:30,
     message: 'Test NewApp'  + new Date().toLocaleString(),
+    DemoTest:'Demo test is working',
     seen: true,
     todos:[
       {name:"name1"},
