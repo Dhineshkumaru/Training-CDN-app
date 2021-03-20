@@ -14,6 +14,14 @@
 
     <div id="NewApp" v-bind:title= "message">
         <!-- {{message}} -->Binding property is working.
+        <div v-if ="seen" > Now you can see me</div>
+        <div>
+            <b>
+                <ol>
+                    <li v-for = "todo in todos">{{todo.name}}</li>
+                </ol>
+            </b>
+        </div>
     </div>
     <div id="app">
         <plan-picker></plan-picker>

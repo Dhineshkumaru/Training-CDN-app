@@ -34,5 +34,11 @@ var NewApp = new Vue({
   el: '#NewApp',
   data:{
     message: 'Test NewApp'  + new Date().toLocaleString(),
+    seen: true,
+    todos:[
+      {name:"name1"},
+      {name:"name2"},
+      {name:"name3"},
+    ]
   }
 })
