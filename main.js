@@ -33,8 +33,14 @@ new Vue({
 var NewApp = new Vue({
   el: '#NewApp',
   data:{
-    activeColor: 'red',
-    fontSize:30,
+    styleObject:{
+      color: 'red',
+      fontSize:'30px',
+    },
+    styleObject2:{
+      backgroundColor:'yellow',
+    },
+    
     message: 'Test NewApp'  + new Date().toLocaleString(),
     DemoTest:'Demo test is working',
     seen: true,

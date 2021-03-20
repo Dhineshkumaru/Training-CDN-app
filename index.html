@@ -16,11 +16,11 @@
     <div id="NewApp" v-bind:title= "message" >
         <!-- {{message}} -->Binding property is working.
         <div v-if ="seen" > Now you can see me</div>
-        <div v-once v-bind:style = "{color:activeColor, fontSize:fontSize +'px' }">{{ DemoTest }}</div>
+        <div v-once v-bind:style = "[styleObject,styleObject2]">{{ DemoTest }}</div>
         <div>
             <b>
                 <ol>
-                    <li v-for = "todo in todos" >{{todo.name}}</li>
+                    <li v-for = "todo of todos" >{{todo.name}}</li>
                 </ol>
             </b>
         </div>
