@@ -21,8 +21,10 @@ Vue.component('plan-picker',{
    return{
     plans:['The Hacker', 'title1', 'title2', 'title3']
    }
-  }
+  },
+  
 })
+// Component-3 New component using props
 
 
 new Vue({
