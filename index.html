@@ -6,12 +6,26 @@
     <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <!-- <script src="https://unpkg.com/vue"></script> -->
     <script src="./unpkg-vue.js"></script>
+    <script src="./gsap.min.js"></script>
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
     
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
 
 </head>
 <body>
 <h1>vue js component excersice</h1>
+    <div id="App2" class="">
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component ></new-app-component>
+      <new-app-component></new-app-component>
+      {{message3}}
+    </div>
 
     <div id="NewApp" v-bind:title= "message" >
         <!-- {{message}} -->Binding property is working.
@@ -20,7 +34,7 @@
         <div>
             <b>
                 <ol>
-                    <li v-for = "todo of todos" >{{todo.name}}</li>
+                    <li v-for = "todo of todos">{{todo.name}}</li>
                 </ol>
             </b>
         </div>
@@ -57,7 +71,23 @@
             <plan v-for ="plan in plans" :name="plan"></plan>
         </div>
     </script>
+
+    <script type="text/x-template" id="new-app-component-template">
+        <div>
+            <p v-on:click ="anim" class= "anim2">Click</p>
+            <button v-on:click ="anim1"  class= "anim3">new-app-component-template{{count}}</button>
+        </div>
+        </script>
     <script src="./main.js"></script>
+    <script>
+        // gsap.from('.anim2', {
+        //     opacity: 0, 
+        //     duration: 0.5, 
+        //     y: -50,
+        //     ease: 'elastic(3, 0.3)'
+        // })
+    </script>
+    <!-- <script src="./App.js"></script> -->
 </body>
 
 </html>
